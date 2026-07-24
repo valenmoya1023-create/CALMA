@@ -1,0 +1,10 @@
+{
+  "name": "content-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pull-data": "node --env-file=.env scripts/pull-data.js",
+    "pull-data:test": "node --env-file=.env scripts/pull-data.js --test"
+  }
+}
