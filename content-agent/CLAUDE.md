@@ -39,7 +39,6 @@ emotional safety and accuracy over virality.
 
 - @IHadAMiscarriage
 - @pregnancyafterlosssupport
-- @maternidad.arcoiris
 - @mitribuperinatal
 - @dueloyarcoiris
 - @dra_yaritza

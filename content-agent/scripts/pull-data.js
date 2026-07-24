@@ -20,7 +20,6 @@ const MY_USERNAME = "calma.education";
 const ALL_COMPETITORS = [
   "IHadAMiscarriage",
   "pregnancyafterlosssupport",
-  "maternidad.arcoiris",
   "mitribuperinatal",
   "dueloyarcoiris",
   "dra_yaritza",
