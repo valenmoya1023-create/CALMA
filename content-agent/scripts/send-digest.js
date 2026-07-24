@@ -82,26 +82,26 @@ function buildDigest(data) {
     lines.push("");
   }
 
-  lines.push(`💡 *Idea recomendada*`);
+  lines.push(`💡 *Idea recomendada (Pilar 2 — Comprensión)*`);
   lines.push(
     reelCompetitors.length > 0
-      ? `El formato reel está funcionando en ${reelCompetitors.length} de ${competitors.length} cuentas de referencia. Prioriza un reel esta semana sobre miedo anticipatorio o hipervigilancia perinatal tras una pérdida.`
+      ? `El formato reel está funcionando en ${reelCompetitors.length} de ${competitors.length} cuentas de referencia. Cadencia real: lunes y jueves — prioriza un reel esta semana sobre miedo anticipatorio o hipervigilancia perinatal tras una pérdida.`
       : "Sigue variando formatos — aún no hay un patrón claro en las cuentas de referencia."
   );
   lines.push("");
 
   lines.push(`✍️ *Ángulo de hook*`);
   lines.push(
-    `"No es que estés exagerando. Que tu cuerpo siga en alerta después de una pérdida tiene una explicación — y también tiene salida."`
+    `"El miedo que sientes no es exagerado. Es tu manera de intentar mantener a tu bebé a salvo."\n_En CALMA creemos que esto no es una falla tuya — es tu mente cuidándote con la información que tiene._`
   );
   lines.push("");
 
-  lines.push(`🎠 *Idea de carrusel*`);
-  lines.push(`"Por qué el miedo no desaparece solo porque ya pasó lo peor" — 6 slides, arco CALMA completo.`);
+  lines.push(`🎠 *Idea de carrusel (estructura fija: Gancho → Reconocimiento → Explicación → Evidencia → Reflexión → Invitación)*`);
+  lines.push(`"Por qué revisas los síntomas más de lo que quisieras" — 6 slides.`);
   lines.push("");
 
   lines.push(`📣 *CTA sugerido*`);
-  lines.push(`"Guarda este post para releerlo en un día difícil, y compártelo con alguien que lo necesite hoy."`);
+  lines.push(`"🌿 Guarda este carrusel para releerlo en un día en que la alerta se sienta más fuerte, y compártelo con alguien que también lo necesite."`);
 
   return lines.join("\n");
 }

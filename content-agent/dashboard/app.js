@@ -130,8 +130,8 @@ function buildAgentContent(data) {
           staticCompetitors.length > 0
             ? `Las cuentas ${staticCompetitors.map((c) => "@" + c.username).join(", ")} mantienen buen desempeño con carruseles/fotos — vale la pena revisar sus ángulos.`
             : null,
-          "Ángulo con hueco: ninguna cuenta de referencia está hablando del miedo anticipatorio en el embarazo después de una pérdida desde una perspectiva de neurociencia accesible — es un espacio propio de CALMA.",
-          "Recomendación: usar la voz CALMA (reconocer → comprender → reencuadrar → acompañar) en un formato reel para capturar el interés que hoy capta la competencia.",
+          "Ángulo con hueco (pilar Comprensión): ninguna cuenta de referencia está hablando del miedo anticipatorio en el embarazo después de una pérdida desde una perspectiva de neurociencia accesible — es un espacio propio de CALMA.",
+          "Recomendación: llevar este ángulo a un reel siguiendo la estructura de escritura CALMA (curiosidad → validar → explicar → reencuadrar → cierre reflexivo) para capturar el interés que hoy capta la competencia.",
         ].filter(Boolean),
       },
     },
@@ -144,16 +144,15 @@ function buildAgentContent(data) {
         { value: 3, label: "hooks listos" },
         { value: "CALMA", label: "voz verificada" },
       ],
-      preview:
-        '"No es que estés exagerando. Que tu cuerpo siga en alerta después de una pérdida tiene una explicación — y también tiene salida."',
+      preview: '"El miedo que sientes no es exagerado. Es tu manera de intentar mantener a tu bebé a salvo."',
       detail: {
-        heading: "Hook + guion (Reel, 30–40 seg)",
+        heading: "Hook + guion (Reel, pilar Comprensión)",
         items: [
-          "Hook: \"No es que estés exagerando. Que tu cuerpo siga en alerta después de una pérdida tiene una explicación — y también tiene salida.\"",
-          "Reconocer (0–8s): nombrar el miedo anticipatorio durante el embarazo después de una pérdida sin minimizarlo ni dramatizarlo.",
-          "Comprender (8–20s): explicar en lenguaje simple por qué el sistema de alerta del cuerpo se queda encendido (neurocepción, hipervigilancia).",
-          "Reencuadrar (20–30s): esto no es una falla personal, es una respuesta protectora que se puede regular.",
-          "Acompañar (30–40s): una acción pequeña y concreta para hoy + invitación a guardar el video para releerlo en un mal día.",
+          "Gancho: \"El miedo que sientes no es exagerado. Es tu manera de intentar mantener a tu bebé a salvo.\"",
+          "Validar: \"Quizás has notado que revisas cada síntoma, cuentas los movimientos, o te cuesta relajarte incluso cuando todo va bien.\"",
+          "Explicar: \"Después de una pérdida, tu sistema de alerta aprendió que lo que parecía seguro podía dejar de serlo — y desde entonces intenta protegerte manteniéndote alerta.\"",
+          "Reencuadrar: \"En CALMA creemos que esto no es una falla tuya. Es tu mente haciendo lo que sabe hacer mejor: cuidarte con la información que tiene.\"",
+          "Cierre: \"🌿 ¿En qué momento del día notas que tu mente entra en alerta con más facilidad?\"",
         ],
       },
     },
@@ -168,15 +167,15 @@ function buildAgentContent(data) {
       ],
       preview:
         sinceLastPost !== null
-          ? `Próximo recomendado: Reel sobre miedo anticipatorio en el embarazo después de una pérdida — ${sinceLastPost >= 5 ? "hoy sería buen momento para publicar" : "en los próximos días"}.`
+          ? `Cadencia: lunes y jueves. Próximo recomendado: Reel (Pilar 1, Reconocimiento) sobre miedo anticipatorio en el embarazo después de una pérdida.`
           : "Calculando tu cadencia de publicación...",
       detail: {
-        heading: "Próximos 7 días sugeridos",
+        heading: "Próximas publicaciones (cadencia real: lunes y jueves)",
         items: [
-          "Lunes — Reel: \"Por qué el miedo no se va solo porque ya pasó lo peor\" (ansiedad anticipatoria).",
-          "Miércoles — Carrusel: 4 señales de hipervigilancia perinatal y qué hacer con cada una.",
-          "Viernes — Foto + caption largo: reflexión editorial sobre validar sin reforzar el miedo.",
-          "Domingo — Reel: responder una pregunta real recibida por DM (con permiso, sin datos identificables).",
+          "Lunes — Reel (Pilar 1, Reconocimiento): \"El miedo que vuelve cada vez que empieza una nueva semana de embarazo.\"",
+          "Jueves — Carrusel (Pilar 2, Comprensión): 6 slides sobre por qué revisas los síntomas más de lo que quisieras.",
+          "Lunes siguiente — CALMA Space breve (Pilar 4, Práctica CALMA): Notar → Comprender → Elegir, un ejercicio corto para las noches de más alerta.",
+          "Jueves siguiente — Reel (Pilar 1, Reconocimiento): responder una pregunta real recibida por DM (con permiso, sin datos identificables).",
         ],
       },
     },
@@ -232,16 +231,16 @@ function buildAgentContent(data) {
         { value: 1, label: "esquema listo" },
         { value: 6, label: "diapositivas" },
       ],
-      preview: "\"Por qué el miedo no desaparece solo porque ya pasó lo peor\" — 6 slides, arco CALMA completo.",
+      preview: "\"Por qué revisas los síntomas más de lo que quisieras\" — 6 slides, estructura fija de carrusel CALMA.",
       detail: {
-        heading: "Carrusel: el miedo después de la pérdida",
+        heading: "Carrusel: por qué revisas los síntomas más de lo que quisieras",
         items: [
-          "Slide 1 (Reconocer): \"Ya pasó lo peor. Entonces, ¿por qué el miedo sigue ahí?\"",
-          "Slide 2 (Reconocer): Nombrar la sensación — alerta constante, dificultad para disfrutar el presente.",
-          "Slide 3 (Comprender): El cerebro aprendió a anticipar el peligro para protegerte, no para sabotearte.",
-          "Slide 4 (Comprender): Por qué el miedo perinatal después de una pérdida es distinto al miedo 'general' durante el embarazo.",
-          "Slide 5 (Reencuadrar): Esto no es falta de fe ni de gratitud — es una respuesta biológica que se puede regular.",
-          "Slide 6 (Acompañar): Una práctica breve para hoy + invitación a guardar el post.",
+          "Slide 1 (Gancho): \"Revisar los síntomas no significa que estés exagerando. Significa que tu mente está intentando protegerte.\"",
+          "Slide 2 (Reconocimiento): \"Quizás has notado que cuentas movimientos, relees resultados, o te cuesta disfrutar un buen control sin pensar en el siguiente.\"",
+          "Slide 3 (Explicación): \"Después de una pérdida, el cerebro aprende que lo que parecía seguro podía dejar de serlo — y se mantiene en alerta para protegerte.\"",
+          "Slide 4 (Evidencia): \"A esto la neurociencia lo llama hipervigilancia: una respuesta de protección, no una falla personal ni un signo de debilidad.\"",
+          "Slide 5 (Reflexión): \"En CALMA creemos que comprender esta respuesta cambia la forma en que te relacionas con el miedo — deja de ser un enemigo y se convierte en algo que puedes acompañar.\"",
+          "Slide 6 (Invitación): \"🌿 Guarda este carrusel para releerlo en un día en que la alerta se sienta más fuerte, y compártelo con alguien que también lo necesite.\"",
         ],
       },
     },
