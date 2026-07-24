@@ -6,6 +6,7 @@
   "scripts": {
     "pull-data": "node --env-file=.env scripts/pull-data.js",
     "pull-data:test": "node --env-file=.env scripts/pull-data.js --test",
-    "send-digest": "node --env-file=.env scripts/send-digest.js"
+    "send-digest": "node --env-file=.env scripts/send-digest.js",
+    "weekly": "npm run pull-data && npm run send-digest"
   }
 }
