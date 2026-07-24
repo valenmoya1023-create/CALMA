@@ -136,7 +136,7 @@ async function main() {
   const followerCountByUsername = {};
   for (const p of profiles) {
     const uname = p.username ?? p.account;
-    if (uname) followerCountByUsername[uname] = p.followersCount ?? null;
+    if (uname) followerCountByUsername[uname.toLowerCase()] = p.followersCount ?? null;
   }
 
   const output = {
@@ -144,14 +144,14 @@ async function main() {
     isTestRun: isTest,
     account: {
       username: MY_USERNAME,
-      followersCount: followerCountByUsername[MY_USERNAME] ?? null,
+      followersCount: followerCountByUsername[MY_USERNAME.toLowerCase()] ?? null,
       postsFetched: myPosts.length,
       topPosts: myPosts.slice(0, 10),
       posts: myPosts,
     },
     competitors: competitors.map((c) => ({
       username: c.username,
-      followersCount: followerCountByUsername[c.username] ?? null,
+      followersCount: followerCountByUsername[c.username.toLowerCase()] ?? null,
       postsFetched: c.posts.length,
       topPosts: c.posts.slice(0, 5),
     })),
