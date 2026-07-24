@@ -130,7 +130,7 @@ function buildAgentContent(data) {
           staticCompetitors.length > 0
             ? `Las cuentas ${staticCompetitors.map((c) => "@" + c.username).join(", ")} mantienen buen desempeño con carruseles/fotos — vale la pena revisar sus ángulos.`
             : null,
-          "Ángulo con hueco: ninguna cuenta de referencia está hablando de ansiedad postparto desde una perspectiva de neurociencia accesible — es un espacio propio de CALMA.",
+          "Ángulo con hueco: ninguna cuenta de referencia está hablando del miedo anticipatorio en el embarazo después de una pérdida desde una perspectiva de neurociencia accesible — es un espacio propio de CALMA.",
           "Recomendación: usar la voz CALMA (reconocer → comprender → reencuadrar → acompañar) en un formato reel para capturar el interés que hoy capta la competencia.",
         ].filter(Boolean),
       },
@@ -150,7 +150,7 @@ function buildAgentContent(data) {
         heading: "Hook + guion (Reel, 30–40 seg)",
         items: [
           "Hook: \"No es que estés exagerando. Que tu cuerpo siga en alerta después de una pérdida tiene una explicación — y también tiene salida.\"",
-          "Reconocer (0–8s): nombrar la ansiedad postparto después de una pérdida sin minimizarla ni dramatizarla.",
+          "Reconocer (0–8s): nombrar el miedo anticipatorio durante el embarazo después de una pérdida sin minimizarlo ni dramatizarlo.",
           "Comprender (8–20s): explicar en lenguaje simple por qué el sistema de alerta del cuerpo se queda encendido (neurocepción, hipervigilancia).",
           "Reencuadrar (20–30s): esto no es una falla personal, es una respuesta protectora que se puede regular.",
           "Acompañar (30–40s): una acción pequeña y concreta para hoy + invitación a guardar el video para releerlo en un mal día.",
@@ -168,13 +168,13 @@ function buildAgentContent(data) {
       ],
       preview:
         sinceLastPost !== null
-          ? `Próximo recomendado: Reel sobre ansiedad postparto — ${sinceLastPost >= 5 ? "hoy sería buen momento para publicar" : "en los próximos días"}.`
+          ? `Próximo recomendado: Reel sobre miedo anticipatorio en el embarazo después de una pérdida — ${sinceLastPost >= 5 ? "hoy sería buen momento para publicar" : "en los próximos días"}.`
           : "Calculando tu cadencia de publicación...",
       detail: {
         heading: "Próximos 7 días sugeridos",
         items: [
           "Lunes — Reel: \"Por qué el miedo no se va solo porque ya pasó lo peor\" (ansiedad anticipatoria).",
-          "Miércoles — Carrusel: 4 señales de hipervigilancia postparto y qué hacer con cada una.",
+          "Miércoles — Carrusel: 4 señales de hipervigilancia perinatal y qué hacer con cada una.",
           "Viernes — Foto + caption largo: reflexión editorial sobre validar sin reforzar el miedo.",
           "Domingo — Reel: responder una pregunta real recibida por DM (con permiso, sin datos identificables).",
         ],
@@ -239,7 +239,7 @@ function buildAgentContent(data) {
           "Slide 1 (Reconocer): \"Ya pasó lo peor. Entonces, ¿por qué el miedo sigue ahí?\"",
           "Slide 2 (Reconocer): Nombrar la sensación — alerta constante, dificultad para disfrutar el presente.",
           "Slide 3 (Comprender): El cerebro aprendió a anticipar el peligro para protegerte, no para sabotearte.",
-          "Slide 4 (Comprender): Por qué la ansiedad postparto después de una pérdida es distinta a la ansiedad 'general'.",
+          "Slide 4 (Comprender): Por qué el miedo perinatal después de una pérdida es distinto al miedo 'general' durante el embarazo.",
           "Slide 5 (Reencuadrar): Esto no es falta de fe ni de gratitud — es una respuesta biológica que se puede regular.",
           "Slide 6 (Acompañar): Una práctica breve para hoy + invitación a guardar el post.",
         ],
