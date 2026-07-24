@@ -51,10 +51,10 @@ function renderStats(data) {
       sub: "@" + acc.username,
     },
     {
-      label: "Top post",
+      label: "Publicación destacada",
       value: topPost ? formatCompact(topPost.rankScore) : "—",
       sub: topPost
-        ? `<a href="${topPost.url}" target="_blank" rel="noopener">${topPost.metricType === "views" ? "vistas — ver post" : "interacciones — ver post"}</a>`
+        ? `<a href="${topPost.url}" target="_blank" rel="noopener">${topPost.metricType === "views" ? "vistas — ver publicación" : "interacciones — ver publicación"}</a>`
         : "sin datos",
     },
     {
@@ -66,14 +66,14 @@ function renderStats(data) {
       })(),
     },
     {
-      label: "Engagement promedio",
+      label: "Interacción promedio",
       value: avgEngagementRate !== null ? avgEngagementRate.toFixed(1) + "%" : "—",
-      sub: "de tus seguidores por post",
+      sub: "de tus seguidores por publicación",
     },
     {
       label: "Mejor formato",
       value: bestFormat,
-      sub: "según tu post con mejor desempeño",
+      sub: "según tu publicación con mejor desempeño",
     },
   ];
 
@@ -108,7 +108,7 @@ function buildAgentContent(data) {
 
   return {
     scout: {
-      name: "Scout",
+      name: "Explorador",
       role: "Encuentra ideas y huecos de contenido",
       icon: "🔎",
       metrics: [
@@ -137,7 +137,7 @@ function buildAgentContent(data) {
     },
 
     hookScript: {
-      name: "Hook & Script",
+      name: "Ganchos y Guiones",
       role: "Escribe hooks, guiones y captions",
       icon: "✍️",
       metrics: [
@@ -159,7 +159,7 @@ function buildAgentContent(data) {
     },
 
     planner: {
-      name: "Planner",
+      name: "Planificador",
       role: "Organiza tu calendario de contenido",
       icon: "🗓️",
       metrics: [
@@ -182,7 +182,7 @@ function buildAgentContent(data) {
     },
 
     analyst: {
-      name: "Analyst",
+      name: "Analista",
       role: "Analiza tus estadísticas reales",
       icon: "📊",
       metrics: [
@@ -205,12 +205,12 @@ function buildAgentContent(data) {
     },
 
     dmManager: {
-      name: "DM Manager",
+      name: "Gestor de DMs",
       role: "Ayuda con respuestas y seguimiento de DMs",
       icon: "💬",
       metrics: [
         { value: 2, label: "plantillas listas" },
-        { value: "trauma-informed", label: "tono verificado" },
+        { value: "trauma-informado", label: "tono verificado" },
       ],
       preview:
         '"Gracias por confiarme algo tan difícil. No estás sola en esto, y no existe una forma \'correcta\' de sentir lo que sientes."',
@@ -225,12 +225,12 @@ function buildAgentContent(data) {
     },
 
     carouselBuilder: {
-      name: "Carousel Builder",
+      name: "Carruseles",
       role: "Convierte ideas en carruseles",
       icon: "🎠",
       metrics: [
-        { value: 1, label: "outline listo" },
-        { value: 6, label: "slides" },
+        { value: 1, label: "esquema listo" },
+        { value: 6, label: "diapositivas" },
       ],
       preview: "\"Por qué el miedo no desaparece solo porque ya pasó lo peor\" — 6 slides, arco CALMA completo.",
       detail: {
@@ -270,7 +270,7 @@ function renderAgents(agentContent) {
             .map((m) => `<div class="metric"><div class="metric-value">${m.value}</div><div class="metric-label">${m.label}</div></div>`)
             .join("")}
         </div>
-        <div class="agent-preview"><span class="tag">Último output</span>${a.preview}</div>
+        <div class="agent-preview"><span class="tag">Último resultado</span>${a.preview}</div>
         <div class="agent-footer"><span>Ver detalle</span><span class="arrow">→</span></div>
       </article>`;
     })
