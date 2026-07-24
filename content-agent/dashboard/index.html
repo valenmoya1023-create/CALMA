@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CALMA — Content Command Center</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <div class="brand-mark">C</div>
+      <div>
+        <h1>Content Command Center</h1>
+        <div class="subtitle">@calma.education · 6 agentes activos</div>
+      </div>
+    </div>
+    <div class="updated">Última actualización<br><strong id="updated-at">—</strong></div>
+  </header>
+
+  <section class="stats" id="stats">
+    <!-- stat tiles injected by app.js -->
+  </section>
+
+  <div class="section-heading">
+    <h2>Tu equipo de agentes</h2>
+    <span>Haz clic en una tarjeta para ver el detalle</span>
+  </div>
+
+  <section class="agents" id="agents">
+    <!-- agent cards injected by app.js -->
+  </section>
+
+  <footer class="foot">CALMA Content Agent · datos reales de Instagram vía Apify</footer>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <div>
+        <div class="agent-role" id="modal-role">Agente</div>
+        <h2 id="modal-title" style="margin:2px 0 0;font-size:19px;"></h2>
+      </div>
+      <button class="modal-close" id="modal-close" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
