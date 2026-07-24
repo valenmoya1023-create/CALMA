@@ -8,7 +8,7 @@ function formatCompact(n) {
   if (n === null || n === undefined) return "—";
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M";
   if (n >= 1_000) return (n / 1_000).toFixed(1).replace(/\.0$/, "") + "K";
-  return String(n);
+  return String(Math.round(n));
 }
 
 function daysAgo(iso) {
@@ -60,7 +60,10 @@ function renderStats(data) {
     {
       label: "Vistas totales (reels)",
       value: formatCompact(totalViews),
-      sub: `${data.account.posts.filter((p) => p.metricType === "views").length} reels analizados`,
+      sub: (() => {
+        const n = data.account.posts.filter((p) => p.metricType === "views").length;
+        return n === 1 ? "1 reel analizado" : `${n} reels analizados`;
+      })(),
     },
     {
       label: "Engagement promedio",
