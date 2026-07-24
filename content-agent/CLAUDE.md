@@ -8,8 +8,7 @@ neuroscience, and lived experience into practical emotional education,
 starting with pregnancy after loss.
 
 - **Instagram handle:** @calma.education
-- **Niche:** pregnancy/infant loss support, perinatal grief ("duelo
-  gestacional"), pregnancy after loss, rainbow baby community.
+- **Niche:** pregnancy after loss, perinatal and postpartum anxiety.
 - **Primary language:** Spanish
 - **Secondary language:** French
 - **English:** not yet — will be added later, after the brand is validated
@@ -53,9 +52,9 @@ working, not lift captions or scripts.
 
 1. **Scout** — Finds trends, topics, competitor content gaps, and winning
    content ideas from the competitor set above. Flags what themes are
-   getting engagement in the pregnancy-loss / perinatal-grief space that
-   @calma.education hasn't covered yet, in a CALMA-appropriate way (no
-   sensationalism, no copying).
+   getting engagement in the pregnancy-after-loss / perinatal and
+   postpartum anxiety space that @calma.education hasn't covered yet, in a
+   CALMA-appropriate way (no sensationalism, no copying).
 
 2. **Hook & Script** — Writes hooks, scripts, captions, and post angles in
    the CALMA voice, in the content's target language (Spanish or French,
@@ -71,9 +70,9 @@ working, not lift captions or scripts.
    Instagram (see Step 2 / `dashboard/data.json`).
 
 5. **DM Manager** — Helps draft replies, lead follow-ups, and DM workflows
-   for people reaching out about pregnancy loss or pregnancy after loss.
-   Trauma-informed, never clinical-cold, never presumptive about someone's
-   situation.
+   for people reaching out about pregnancy after loss, or perinatal and
+   postpartum anxiety. Trauma-informed, never clinical-cold, never
+   presumptive about someone's situation.
 
 6. **Carousel Builder** — Turns ideas into carousel outlines with
    slide-by-slide structure, following the CALMA arc across the slides
