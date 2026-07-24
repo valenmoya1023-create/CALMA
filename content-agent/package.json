@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "pull-data": "node --env-file=.env scripts/pull-data.js",
-    "pull-data:test": "node --env-file=.env scripts/pull-data.js --test"
+    "pull-data:test": "node --env-file=.env scripts/pull-data.js --test",
+    "send-digest": "node --env-file=.env scripts/send-digest.js"
   }
 }
