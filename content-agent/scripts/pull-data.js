@@ -100,8 +100,20 @@ function normalizePost(raw) {
   };
 }
 
+function isRealPost(raw) {
+  // The actor returns an error placeholder (no shortCode/type) instead of
+  // throwing when a profile can't be scraped (private, wrong handle, rate
+  // limited, etc). Never treat that placeholder as a real 0-engagement post.
+  return Boolean(raw && raw.type && (raw.shortCode || raw.id));
+}
+
 function rankPosts(rawPosts) {
-  return rawPosts.map(normalizePost).sort((a, b) => b.rankScore - a.rankScore);
+  const real = rawPosts.filter(isRealPost);
+  const errorItems = rawPosts.filter((r) => !isRealPost(r));
+  return {
+    posts: real.map(normalizePost).sort((a, b) => b.rankScore - a.rankScore),
+    fetchError: errorItems.length > 0 ? (errorItems[0].error ?? errorItems[0].errorDescription ?? "actor returned no valid posts") : null,
+  };
 }
 
 async function main() {
@@ -113,8 +125,10 @@ async function main() {
     resultsType: "posts",
     resultsLimit: MY_RESULTS_LIMIT,
   });
-  const myPosts = rankPosts(myPostsRaw);
-  console.log(`  -> got ${myPosts.length} posts`);
+  const my = rankPosts(myPostsRaw);
+  console.log(
+    my.fetchError ? `  -> FAILED: ${my.fetchError}` : `  -> got ${my.posts.length} posts`
+  );
 
   const competitors = [];
   for (const handle of COMPETITORS) {
@@ -124,9 +138,11 @@ async function main() {
       resultsType: "posts",
       resultsLimit: COMPETITOR_RESULTS_LIMIT,
     });
-    const posts = rankPosts(raw);
-    console.log(`  -> got ${posts.length} posts`);
-    competitors.push({ username: handle, posts });
+    const result = rankPosts(raw);
+    console.log(
+      result.fetchError ? `  -> FAILED: ${result.fetchError}` : `  -> got ${result.posts.length} posts`
+    );
+    competitors.push({ username: handle, ...result });
   }
 
   console.log(`Pulling follower counts for ${1 + COMPETITORS.length} profiles...`);
@@ -145,14 +161,16 @@ async function main() {
     account: {
       username: MY_USERNAME,
       followersCount: followerCountByUsername[MY_USERNAME.toLowerCase()] ?? null,
-      postsFetched: myPosts.length,
-      topPosts: myPosts.slice(0, 10),
-      posts: myPosts,
+      postsFetched: my.posts.length,
+      fetchError: my.fetchError,
+      topPosts: my.posts.slice(0, 10),
+      posts: my.posts,
     },
     competitors: competitors.map((c) => ({
       username: c.username,
       followersCount: followerCountByUsername[c.username.toLowerCase()] ?? null,
       postsFetched: c.posts.length,
+      fetchError: c.fetchError,
       topPosts: c.posts.slice(0, 5),
     })),
   };
@@ -164,18 +182,23 @@ async function main() {
   console.log("\n--- Summary ---");
   console.log(`My followers: ${output.account.followersCount}`);
   console.log(`My posts fetched: ${output.account.postsFetched}`);
-  if (myPosts[0]) {
-    console.log(
-      `My top post: ${myPosts[0].url} (${myPosts[0].metricType}=${myPosts[0].rankScore})`
-    );
+  if (output.account.fetchError) {
+    console.log(`  WARNING: could not fetch my posts (${output.account.fetchError})`);
+  } else if (output.account.topPosts[0]) {
+    const top = output.account.topPosts[0];
+    console.log(`My top post: ${top.url} (${top.metricType}=${top.rankScore})`);
   }
   for (const c of output.competitors) {
     const top = c.topPosts[0];
-    console.log(
-      `@${c.username}: ${c.followersCount ?? "?"} followers, top post ${
-        top ? `${top.url} (${top.metricType}=${top.rankScore})` : "none fetched"
-      }`
-    );
+    if (c.fetchError) {
+      console.log(`@${c.username}: FAILED TO FETCH (${c.fetchError}) -- followers: ${c.followersCount ?? "?"}`);
+    } else {
+      console.log(
+        `@${c.username}: ${c.followersCount ?? "?"} followers, top post ${
+          top ? `${top.url} (${top.metricType}=${top.rankScore})` : "no posts fetched"
+        }`
+      );
+    }
   }
 }
 
