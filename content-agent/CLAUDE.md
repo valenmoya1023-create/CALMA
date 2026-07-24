@@ -103,7 +103,8 @@ safety and accuracy over virality.
   official recurring labels used to tag certain posts. (Exact usage rules
   for when to apply each stamp aren't documented yet — ask before
   inventing a rule for which stamp applies when.)
-- **Posting cadence:** Monday and Thursday. No fixed time of day is
+- **Posting cadence:** 5 posts/week, fixed by format — **Carrusel: lunes
+  y jueves. Reel: martes, viernes y sábado.** No fixed time of day is
   documented.
 
 ## Things to avoid
@@ -179,9 +180,11 @@ working, not lift captions or scripts.
    a "link en bio" CTA.
 
 3. **Planner** — Plans the content calendar around the real posting
-   cadence (Monday and Thursday) and decides what to post next, balancing
-   formats (reel, carousel, static, CALMA Space breve) and pillars —
+   cadence (carrusel on lunes/jueves, reel on martes/viernes/sábado — 5
+   posts/week) and decides what to post next, balancing pillars —
    prioritizing pillars 1, 2, and 4 while the account is under 100 posts.
+   CALMA Space breve can substitute either format when a quick-practice
+   piece fits better than a full carousel or reel.
 
 4. **Analyst** — Analyses @calma.education's real stats: top posts, views,
    engagement rate, and what is working, using the data pulled from

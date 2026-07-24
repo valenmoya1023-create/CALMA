@@ -167,15 +167,16 @@ function buildAgentContent(data) {
       ],
       preview:
         sinceLastPost !== null
-          ? `Cadencia: lunes y jueves. Próximo recomendado: Reel (Pilar 1, Reconocimiento) sobre miedo anticipatorio en el embarazo después de una pérdida.`
+          ? `Cadencia: carrusel lunes/jueves, reel martes/viernes/sábado. Próximo recomendado: Carrusel (Pilar 2, Comprensión) sobre por qué revisas los síntomas más de lo que quisieras.`
           : "Calculando tu cadencia de publicación...",
       detail: {
-        heading: "Próximas publicaciones (cadencia real: lunes y jueves)",
+        heading: "Semana sugerida (carrusel lunes/jueves · reel martes/viernes/sábado)",
         items: [
-          "Lunes — Reel (Pilar 1, Reconocimiento): \"El miedo que vuelve cada vez que empieza una nueva semana de embarazo.\"",
-          "Jueves — Carrusel (Pilar 2, Comprensión): 6 slides sobre por qué revisas los síntomas más de lo que quisieras.",
-          "Lunes siguiente — CALMA Space breve (Pilar 4, Práctica CALMA): Notar → Comprender → Elegir, un ejercicio corto para las noches de más alerta.",
-          "Jueves siguiente — Reel (Pilar 1, Reconocimiento): responder una pregunta real recibida por DM (con permiso, sin datos identificables).",
+          "Lunes — Carrusel (Pilar 2, Comprensión): 6 slides sobre por qué revisas los síntomas más de lo que quisieras.",
+          "Martes — Reel (Pilar 1, Reconocimiento): \"El miedo que vuelve cada vez que empieza una nueva semana de embarazo.\"",
+          "Jueves — Carrusel (Pilar 1, Reconocimiento): otro ángulo del mismo miedo, en formato carrusel.",
+          "Viernes — Reel (Pilar 4, Práctica CALMA): CALMA Space breve (Notar → Comprender → Elegir), un ejercicio corto para las noches de más alerta.",
+          "Sábado — Reel (Pilar 1, Reconocimiento): responder una pregunta real recibida por DM (con permiso, sin datos identificables).",
         ],
       },
     },

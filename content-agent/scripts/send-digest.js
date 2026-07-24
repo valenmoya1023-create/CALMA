@@ -85,7 +85,7 @@ function buildDigest(data) {
   lines.push(`💡 *Idea recomendada (Pilar 2 — Comprensión)*`);
   lines.push(
     reelCompetitors.length > 0
-      ? `El formato reel está funcionando en ${reelCompetitors.length} de ${competitors.length} cuentas de referencia. Cadencia real: lunes y jueves — prioriza un reel esta semana sobre miedo anticipatorio o hipervigilancia perinatal tras una pérdida.`
+      ? `El formato reel está funcionando en ${reelCompetitors.length} de ${competitors.length} cuentas de referencia. Cadencia real: carrusel lunes/jueves, reel martes/viernes/sábado — prioriza un reel esta semana sobre miedo anticipatorio o hipervigilancia perinatal tras una pérdida.`
       : "Sigue variando formatos — aún no hay un patrón claro en las cuentas de referencia."
   );
   lines.push("");
